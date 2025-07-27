@@ -7,4 +7,4 @@ COPY formatter.sh .
 
 RUN pip3 install --user --no-cache-dir -r requirements.txt
 
-CMD [ "/bin/bash", "-c", "${HOME}/formatter.sh ${ARGV}" ]
+CMD [ "/bin/bash", "-c", "source \"${HOME}/.bashrc\" && \"${HOME}/formatter.sh\" ${ARGV}" ]
